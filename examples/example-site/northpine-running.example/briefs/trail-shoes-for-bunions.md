@@ -52,3 +52,31 @@ Runners with bunions who want shoes that "don't rub" and have a "wide toe box" (
 
 ## Done when
 - Direct answer under 60 words at the top; the three questions above are H2s on the live page; page stays indexable
+
+## Ready-to-use draft
+Edit the existing guide in Shopify admin. Keep it about fit and comfort; no claims that shoes relieve or treat bunions.
+
+**Title tag:** Trail Running Shoes for Bunions: What to Look For | Northpine
+**Meta description:** How to choose trail shoes with bunions: toe-box shape, soft uppers, 2E or 4E width, and a fit check you can do at home.
+
+**Replace the opening paragraph with:**
+For bunions, look for a trail shoe with a wide, rounded toe box, a soft upper with no seam over the joint, and a 2E or 4E width so the shoe doesn't press on the side of your foot. If a bunion is painful, see a podiatrist before choosing shoes.
+
+**Add these sections:**
+
+## What should a trail shoe for bunions have?
+- A toe box that is wide at the front, not only at the ball of the foot
+- A soft, flexible upper over the big-toe joint
+- No stitched seam where the bunion sits
+- A 2E or 4E width rather than a longer size
+
+## How do I check the fit at home?
+1. Try shoes in the afternoon, when feet are largest.
+2. Stand and press the upper over the joint: it should give, not pinch.
+3. Walk downhill or down stairs: your toes should not hit the front or sides.
+
+## Which Northpine models have the widest toe box?
+[check: toe-box details from the Ridgeback Wide, Talus XW and Fernline Wide product pages]
+
+## When to see a podiatrist
+If the joint is red, swollen or painful when you're not running, see a podiatrist. Shoes can make running more comfortable but are not a treatment.

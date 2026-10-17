@@ -16,8 +16,8 @@ from check_site import SECRET  # noqa: E402
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,}")
 ALLOWED_EMAIL_DOMAINS = ("example", "example.com", "example.org", "example.net", "anthropic.com")
 DOMAIN = re.compile(r"\b(?:[a-z0-9-]+\.)+(?:com|org|net|io|co|ai|dev|app|uk|ca|de)\b", re.I)
-# Real domains allowed in the example: the plugin's own repo link only.
-EXAMPLE_ALLOWED = {"github.com"}
+# Real domains allowed in the example: the plugin's repo link, and CMS signatures the crawler looks for.
+EXAMPLE_ALLOWED = {"github.com", "cdn.shopify.com"}
 TEXT = {".md", ".csv", ".json", ".jsonl", ".yaml", ".yml", ".txt", ".py", ".sh", ".cmd", ".toml", ""}
 
 

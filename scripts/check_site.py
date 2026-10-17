@@ -32,7 +32,7 @@ COLUMNS = {
 }
 ANSWER_COLUMNS = "prompt_id,topic,type,engine,source,model_used,mentioned,position,cited,cited_urls,accuracy,accuracy_notes,sentiment,competitors_mentioned,cited_domains,answer_file,method,record_date,run_id"
 
-REQUIRED = ["config.yaml", "state.json", "profile.md", "research/brief.md", "research/coverage.json",
+REQUIRED = ["config.yaml", "state.json", "decisions.md", "profile.md", "research/brief.md", "research/coverage.json",
             "keywords/topics.md", "actions.md", "reports/latest.md"] + list(COLUMNS)
 
 SECRET = re.compile(r"(sk-[A-Za-z0-9_-]{20,}|sk-ant-[A-Za-z0-9_-]{10,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}"

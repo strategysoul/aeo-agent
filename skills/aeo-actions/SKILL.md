@@ -71,11 +71,11 @@ Write new actions only where no matching action exists (matching rules in `actio
 - For each of the top 5 by answers cited, fetch the cited page and work out the realistic route: claim or update a profile, request inclusion in a list (name the article and its author or contact page if shown), answer existing questions on a forum as the brand (following that community's rules), or offer data or an expert quote to a publisher.
 - Never suggest fake reviews, undisclosed paid posts, or posting as someone other than the brand. The agent does not post, sign up or contact anyone.
 
-Every action gets Why (with sources), Do, Expected effect, Effort, Priority and Check, as in `action-format.md`.
+Every action gets Who, Why (with sources), Where, Steps (with everything to copy), Expected effect, Effort, Priority and Check, as in `action-format.md`. Read `decisions.md` first: write the steps for the CMS and the person it names, and skip anything under `Not interested`. For technical actions, put the exact text to paste in the steps (robots.txt lines, replacement copy, title and meta text, redirect rules). For off-site actions, include the message to send, ready to copy.
 
 ## 4. Write `actions.md`
 
-Rewrite the file in the format in `action-format.md`, with every action in its status section, the summary table for open actions sorted by priority, and the counts at the top.
+Rewrite the file in the format in `action-format.md`: the counts, then `## Start here` with the 3 quickest high-value actions, then every action in its status section, with the open table sorted as `action-format.md` → Order says.
 
 ## 5. Log the run
 
@@ -83,7 +83,8 @@ Append the run to `state.json` → `runs` and set `last_run.actions`.
 
 ## Output to the user
 
+- **Start here:** the 3 actions from `## Start here`, each with its minutes estimate and its first step.
 - Actions confirmed or reverted since last run.
-- The new actions, highest priority first, one line each.
+- The new actions, in the same order, one line each.
 - The 3 topics with the biggest gaps and what is cited instead.
 - What data was missing or old.

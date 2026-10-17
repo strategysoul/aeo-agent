@@ -7,6 +7,13 @@ Week to 2026-10-13 · run 2026-10-13-report-9a0b · Setup level: Recommended
 ## Summary
 Northpine was named in 8 of 24 AI answers this week (ChatGPT 3 of 12, Perplexity 5 of 12), up from 6 of 24, but with 12 answers per engine that change is within normal variation. It is never named for bunions or for alternatives to Ridgeline. ChatGPT says Northpine "ships worldwide", which comes from an old line on the shipping page; that fix is marked done but the line is still live. Claude-SearchBot is still blocked in robots.txt.
 
+## Start here
+1. **A003 · Remove the "ships worldwide" line** — 5 minutes, you (Shopify admin). In Online Store → Pages → Shipping, replace "We ship worldwide (coming 2025)." with "We ship to the US and Canada." Your earlier change did not reach the live page.
+2. **A001 · Allow Claude-SearchBot** — 10 minutes, you (Shopify admin). In `robots.txt.liquid`, delete the two `Claude-SearchBot` lines.
+3. **A008 · Ask Run Review to include Northpine** — 15 minutes, you. The message to paste is in actions.md.
+
+Full steps: [actions.md](../actions.md).
+
 ## Needs your review
 - A003 is marked done, but /pages/shipping still contains "We ship worldwide (coming 2025)". Check whether the change was published, then run `/aeo-agent:aeo northpine-running.example review`.
 

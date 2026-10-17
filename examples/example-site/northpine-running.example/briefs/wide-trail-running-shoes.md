@@ -51,7 +51,27 @@ No health claims; no review quotes unless they are real customer reviews shown w
 Keep `CollectionPage` and `BreadcrumbList`; `Product` with `offers` stays on product pages.
 
 ## Internal links
-- Link from this page to: /guides/choosing-width, /guides/ridgeline-alternatives-wide-feet (when live)
+- Link from this page to: /guides/choosing-width, /pages/ridgeline-alternatives-wide-feet (when live)
 
 ## Done when
 - The direct answer and the three H2s above are live on the collection page; page stays indexable
+
+## Ready-to-use draft
+Paste into Shopify admin → Products → Collections → Wide Trail Shoes.
+
+**Title tag:** Wide Trail Running Shoes (2E and 4E) | Northpine
+**Meta description:** Wide and extra-wide trail running shoes in 2E and 4E, from $129. Free 60-day returns in the US and Canada.
+
+**Replace the collection description with:**
+Wide trail running shoes are made on a wider last with more room in the toe box, so your toes can spread on long descents. Northpine makes the Ridgeback Wide and Fernline Wide in 2E and the Talus XW in 4E, from $129 to $169, with free 60-day returns in the US and Canada.
+
+**Add below the product grid (one Rich text block each):**
+
+## Which width do I need, 2E or 4E?
+2E is wide; 4E is extra wide. If standard shoes press on your little toe, start with 2E. If you have already sized up and still feel squeezed, choose 4E. [Measure your width](/guides/choosing-width).
+
+## Which model for which trail?
+[check: one sentence per model — Ridgeback Wide, Talus XW, Fernline Wide — from the product pages]
+
+## Do you ship 4E trail shoes to Canada?
+Yes. We ship to the US and Canada, with prices in USD and CAD and free returns within 60 days.

@@ -22,6 +22,9 @@ Week to <date> · run <run_id> · Setup level: <Free | Recommended | Full>
 ## Summary
 <3–5 sentences: the biggest change, the biggest gap, the most important action. Plain facts with numbers.>
 
+## Start here
+<copy the 3 items from actions.md → Start here: ID, title, minutes, who, and the first step. Link to actions.md for the full steps.>
+
 ## Needs your review
 <only if something is waiting: a proposed research brief, proposed topics, actions marked done that failed their check, an engine source in error. Say what to run, e.g. "/aeo-agent:aeo <domain> review". Omit the section if nothing waits.>
 

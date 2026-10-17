@@ -21,7 +21,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 
-USER_AGENT = "AEO-Agent/0.1 (site check; +https://github.com/strategysoul/aeo-agent)"
+USER_AGENT = "AEO-Agent/0.2 (site check; +https://github.com/strategysoul/aeo-agent)"
 
 # Checked against each operator's docs on 2026-10-17. kind: search = decides whether the site can appear in
 # that engine's answers; user = fetches a page when a person asks (may ignore robots.txt); training = model training.
@@ -78,7 +78,7 @@ class PageParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.title, self.description, self.robots, self.canonical = None, None, [], None
         self.h1, self.hreflang, self.jsonld_types, self.scripts = [], [], [], 0
-        self.lang = None
+        self.lang, self.generator = None, None
         self._in, self._buf, self._skip, self.text_chars = None, [], 0, 0
 
     def handle_starttag(self, tag, attrs):
@@ -93,6 +93,8 @@ class PageParser(HTMLParser):
             name = a.get("name", "").lower()
             if name == "description":
                 self.description = a.get("content", "").strip()
+            elif name == "generator":
+                self.generator = a.get("content", "").strip() or None
             elif name in ("robots", "googlebot"):
                 self.robots += [d.strip().lower() for d in a.get("content", "").split(",") if d.strip()]
         elif tag == "link":
@@ -151,7 +153,29 @@ def parse_page(html):
     p.feed(html)
     return {"title": p.title, "description": p.description, "meta_robots": p.robots, "canonical": p.canonical,
             "h1": p.h1, "lang": p.lang, "hreflang": p.hreflang, "jsonld_types": sorted(set(p.jsonld_types)),
-            "scripts": p.scripts, "text_chars": p.text_chars}
+            "scripts": p.scripts, "text_chars": p.text_chars, "generator": p.generator}
+
+
+# (cms, where to look) — checked in order; the first match wins. Used to write CMS-specific steps in actions.
+CMS_SIGNS = [
+    ("shopify", "header", "x-shopid"), ("shopify", "header", "x-shopify-stage"), ("shopify", "body", "cdn.shopify.com"),
+    ("wordpress", "generator", "wordpress"), ("wordpress", "body", "/wp-content/"),
+    ("wix", "header", "x-wix-request-id"), ("wix", "generator", "wix.com"),
+    ("squarespace", "generator", "squarespace"), ("squarespace", "body", "static1.squarespace.com"),
+    ("webflow", "generator", "webflow"), ("ghost", "generator", "ghost"), ("drupal", "generator", "drupal"),
+    ("joomla", "generator", "joomla"), ("hubspot", "header", "x-hs-cache-config"), ("framer", "generator", "framer"),
+    ("nextjs", "header", "x-nextjs-cache"), ("nextjs", "body", "/_next/static/"),
+]
+
+
+def detect_cms(generator, headers, body):
+    """Best guess at the site's CMS from the home page. Returns (cms, evidence) or ("unknown", None)."""
+    gen, body = (generator or "").lower(), (body or "")[:200_000]
+    for cms, where, sign in CMS_SIGNS:
+        if (where == "header" and sign in headers) or (where == "generator" and sign in gen) or \
+           (where == "body" and sign in body):
+            return cms, f"{where}: {sign}"
+    return "unknown", None
 
 
 def robots_access(robots_txt, base):
@@ -259,6 +283,7 @@ def crawl(domain, max_pages, priority_urls, delay, bot_check, fetcher=fetch, sle
             seen.add(u)
             queue.append(u)
     pages = []
+    report["site"] = {"cms": "unknown", "cms_evidence": None, "method": "inferred"}
     for u in queue[:max_pages]:
         if rp and not rp.can_fetch(USER_AGENT, u):
             pages.append({"url": u, "status": None, "skipped": "disallowed for this checker in robots.txt",
@@ -277,6 +302,9 @@ def crawl(domain, max_pages, priority_urls, delay, bot_check, fetcher=fetch, sle
             page.update({"title": None, "description": None, "meta_robots": [], "canonical": None, "h1": [],
                          "text_chars": 0, "scripts": 0})
         page["issues"] = page_issues(page, domain)
+        if u == base + "/":
+            cms, evidence = detect_cms(page.get("generator"), r["headers"], r["body"])
+            report["site"] = {"cms": cms, "cms_evidence": evidence, "method": "inferred"}
         pages.append(page)
         sleep(delay)
 

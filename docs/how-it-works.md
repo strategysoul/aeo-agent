@@ -22,6 +22,7 @@ Everything for one site lives in `<AEO_ROOT>/<domain>/` (default `~/Documents/AE
 ```
 config.yaml      countries, languages, budgets, which tools are connected
 state.json       approvals, last run per step, every run's spending
+decisions.md     everything you told the agent, so it never asks twice
 profile.md       what the site says about itself
 research/        coverage.json, brief.md, competitors.csv, change_log.md, raw/<date>/
 keywords/        raw.csv, scored.csv, topics.md
@@ -40,6 +41,8 @@ Raw data goes into dated folders and is never overwritten, so runs can be compar
 
 - **It finds out what is available.** Setup makes the cheapest possible call to every source and records plan, units left and limits. Each step uses the best available source and falls back to the next if a call fails. See [data-sources.md](data-sources.md).
 - **Every data point says where it came from:** `source`, `method` (measured, estimated, inferred), `record_date`, `run_id`. Reports say when a weaker source was used.
+- **Ask once.** Every answer you give goes into `decisions.md` and is reused; the agent asks again only if you say something changed or new evidence contradicts it. Specific requests ("add a topic on X") touch only that part.
+- **Actions you can do without thinking.** `actions.md` starts with the 3 quickest high-value changes. Each action says who does it, where (the exact page, CMS screen or file), numbered steps, the text or code to paste, and how the agent will check it. Page actions come with a ready-to-paste draft.
 - **Research only what is missing.** Existing research is reused if it answers the seven questions; only missing or stale (over 90 days) parts are researched.
 - **Two approvals.** You approve the research brief and the priority topics. Scheduled runs never approve; refreshed versions wait as proposals until you run `review`.
 - **A budget per run,** by default 10% of a tool's remaining units per site, and 100 AI-engine questions. Spending is logged.

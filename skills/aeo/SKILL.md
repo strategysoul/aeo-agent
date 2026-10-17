@@ -57,6 +57,8 @@ Setup's own 30-day re-check (§3) covers the monthly capability test. Schedulers
 
 **Order and gates.** A step whose gate is not approved is skipped, not failed, and the next step still runs on the last approved data. `technical` needs no research or approval. If `research/brief.md` does not exist at all, every mode except `setup` and `technical` runs `research` first (interactive) or skips (scheduled).
 
+**Something specific or new.** When the user asks for one thing ("add a topic on X", "also check Canada", "Y is a new competitor", "redo the questions for topic Z"), do only that part: reuse every stored file, update just what the request touches, and record the change in `decisions.md`. Do not rerun research or other steps that are still current.
+
 No mode given: run `setup` if the site is new; otherwise show the site's status (last run per step, approvals, anything waiting for review, units used this month) and the modes above.
 
 ## 5. Approvals and proposals

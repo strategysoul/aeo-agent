@@ -131,6 +131,16 @@ class CrawlTests(unittest.TestCase):
         r = cc.crawl("example-shoes.example", 1, [], 0, False, fetcher=down, sleep=lambda s: None)
         self.assertIn("OAI-SearchBot", r["summary"]["search_bots_blocked"])
 
+    def test_cms_unknown_for_plain_site(self):
+        self.assertEqual(self.report["site"]["cms"], "unknown")
+
+    def test_detect_cms(self):
+        self.assertEqual(cc.detect_cms(None, {"x-shopid": "1"}, "")[0], "shopify")
+        self.assertEqual(cc.detect_cms("WordPress 6.8", {}, "")[0], "wordpress")
+        self.assertEqual(cc.detect_cms(None, {}, '<link href="/wp-content/themes/x.css">')[0], "wordpress")
+        self.assertEqual(cc.parse_page('<meta name="generator" content="Webflow">')["generator"], "Webflow")
+        self.assertEqual(cc.detect_cms(None, {}, "<html></html>"), ("unknown", None))
+
     def test_on_site(self):
         self.assertTrue(cc.on_site("https://www.example-shoes.example/x", "example-shoes.example"))
         self.assertFalse(cc.on_site("https://notexample-shoes.example/x", "example-shoes.example"))

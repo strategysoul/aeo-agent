@@ -30,6 +30,18 @@ Reports say plainly when a weaker source was used, e.g. "Keyword volumes are inf
 - Estimate the cost before each batch of calls. If the batch would go over budget, shrink it (fewer keywords, fewer rows) and say what was cut.
 - After each run, append to `state.json` → `runs`: `{run_id, step, source, units_spent, started_at, finished_at}`.
 
+## Ask once (`decisions.md`)
+
+Everything the agent learns from the user goes into the site's `decisions.md`, so it is never asked again.
+
+- **Before asking anything, read `decisions.md`.** If the answer is there, use it and do not ask. Also do not ask for anything already in `config.yaml`, `state.json` or the approved brief and topics.
+- **After every answer, append it** under the right heading with the date, the question and the answer in the user's words. This includes corrections ("we don't sell waterproof shoes"), limits ("an agency manages robots.txt"), preferences ("no Reddit"), and anything the user volunteers.
+- **Ask again only when** the user says something changed or asks for something new, or when fresh evidence contradicts a recorded answer (then quote both and ask one question). Record the new answer and mark the old one `replaced <date>`.
+- **Keep questions few:** ask everything a step needs in one message, with a suggested answer for each, so the user can reply "yes" or correct one line.
+- Scheduled runs never ask. A question that a scheduled run needed goes into the report under "Needs your review".
+
+`decisions.md` headings: `## Site facts`, `## Who can change what` (CMS, who edits pages, robots.txt, DNS; what the owner cannot change), `## Preferences`, `## Not interested` (topics, channels or actions the user turned down). Steps use `Who can change what` to write instructions for the right tool and person, and never propose something listed under `Not interested`.
+
 ## Approvals
 
 The research brief and the priority topics need a person's approval. Scheduled or non-interactive runs never pass an unapproved gate. When the approved content changes (its hash in `state.json` no longer matches), ask again.

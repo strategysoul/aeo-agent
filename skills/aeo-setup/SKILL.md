@@ -13,15 +13,16 @@ Root and domain rules are in the `aeo` skill. If `<root>/<domain>/` does not exi
 
 1. Create it with these subfolders: `research/raw/`, `keywords/`, `visibility/`, `technical/`, `briefs/`, `reports/`.
 2. Copy `${CLAUDE_PLUGIN_ROOT}/templates/config.yaml` and `${CLAUDE_PLUGIN_ROOT}/templates/state.json` into it. Set `domain` in both.
-3. Create an empty `actions.md` with the headings `## Open`, `## Done, waiting for check`, `## Confirmed`, `## Dismissed`.
+3. Create an empty `actions.md` with the headings `## Start here`, `## Open`, `## Done, waiting for check`, `## Confirmed`, `## Dismissed`.
+4. Copy `${CLAUDE_PLUGIN_ROOT}/templates/decisions.md` into it. Every answer the user gives from now on is recorded there (rules.md → Ask once).
 
 ## 2. Fill in the site basics
 
 If `countries`, `languages` or `brand_names` still hold template values:
 
 1. Fetch the homepage. Read `<html lang>`, `hreflang` links, currency and phone formats, the site name in `<title>` and `og:site_name`.
-2. Propose values and ask the user to confirm or correct them in one question.
-3. Ask whether they already have research (documents, folders, notes) and record the paths in `research.paths`. "None" is a fine answer.
+2. In **one message**, propose values and ask the user to confirm or correct them, together with: whether they already have research (documents, folders, notes) for `research.paths` ("None" is a fine answer); which CMS or site builder the site uses (suggest what the home page HTML shows, e.g. a Shopify or WordPress generator tag); and who can edit pages, robots.txt and DNS, and anything they cannot change.
+3. Save the answers in `config.yaml` and `decisions.md` (`## Site facts`, `## Who can change what`).
 
 In a non-interactive run, keep what is there and note the open questions in the setup output.
 

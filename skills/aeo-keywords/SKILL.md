@@ -18,7 +18,7 @@ Follow `${CLAUDE_PLUGIN_ROOT}/skills/aeo/references/rules.md` throughout. Work i
 
 1. Read the balance live where the recipe says how (Ahrefs `subscription-info`, Semrush `countapiunits`, DataForSEO `user_data`). Otherwise use `units_left` from `config.yaml`.
 2. Budget for this run = `budget.share_of_remaining` × balance, capped by `budget.hard_cap_units` if set. For DataForSEO both are in US dollars.
-3. No balance and no hard cap: interactive run → ask the user for a cap; scheduled run → do only the free parts (Search Console, existing research) and say why.
+3. No balance and no hard cap: interactive run → ask the user for a cap once and save it as `budget.hard_cap_units` in `config.yaml`; scheduled run → do only the free parts (Search Console, existing research) and say why.
 
 ## 2. Plan the calls, cheapest and most useful first
 

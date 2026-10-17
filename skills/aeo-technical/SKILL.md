@@ -37,7 +37,7 @@ python "${CLAUDE_PLUGIN_ROOT}/scripts/crawl_check.py" --domain <domain> \
   --out "<site>/technical/raw/<today>/crawl.json"
 ```
 
-The script fetches only the site's own pages, waits 0.5 seconds between requests, follows robots.txt for itself, and never logs in or submits forms. If Python is not available, do the robots.txt, llms.txt, sitemap and home-page checks with web fetch and say the crawl was limited.
+It also guesses the CMS from the home page (`site.cms`, e.g. `shopify`, `wordpress`); if `decisions.md` has no CMS yet, suggest this guess the next time the user is asked anything, and record the answer. The script fetches only the site's own pages, waits 0.5 seconds between requests, follows robots.txt for itself, and never logs in or submits forms. If Python is not available, do the robots.txt, llms.txt, sitemap and home-page checks with web fetch and say the crawl was limited.
 
 ## 4. Confirm JavaScript-only pages
 

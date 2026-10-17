@@ -3,7 +3,7 @@
 MADE-UP EXAMPLE.
 
 Topic: Alternatives to Ridgeline · Type: comparison · Action: A004
-Page: new, suggested URL /guides/ridgeline-alternatives-wide-feet
+Page: new, suggested URL /pages/ridgeline-alternatives-wide-feet
 Language: en · Market: US, CA
 
 ## Who it is for and what they need
@@ -63,5 +63,41 @@ Facts to include: Northpine makes 2E and 4E models (profile.md); Ridgeline offer
 - Link from this page to: /collections/wide-trail-shoes, /guides/choosing-width
 
 ## Done when
-- Live at /guides/ridgeline-alternatives-wide-feet, indexable, in the sitemap, linked from /collections/wide-trail-shoes
+- Live at /pages/ridgeline-alternatives-wide-feet, indexable, in the sitemap, linked from /collections/wide-trail-shoes
 - The three questions above are answered on the page
+
+## Ready-to-use draft
+Paste into Shopify admin → Online Store → Pages → Add page. Replace anything marked [check].
+
+**Title tag:** Alternatives to Ridgeline for Wide Feet (2E and 4E)
+**Meta description:** Wide trail shoes compared: Ridgeline, Trailkind, WideFoot Gear and Northpine by width, price and who each suits.
+**URL handle:** ridgeline-alternatives-wide-feet
+
+---
+# Alternatives to Ridgeline for wide feet
+
+If Ridgeline's wide models still feel tight, look for a shoe made on a 4E last with a rounded toe box. WideFoot Gear and Northpine make trail shoes in 2E and 4E; Trailkind offers a few wide models. This page is written by Northpine, so we list where each brand is the better fit.
+
+## Which brands make trail shoes in 2E and 4E?
+
+| Brand | Widths | Price | Best for |
+|---|---|---|---|
+| Ridgeline | wide versions of main models | $139–$179 | runners who like Ridgeline's fit but need a little more room |
+| Trailkind | a few wide models | $119–$189 | [check: which Trailkind models come in wide] |
+| WideFoot Gear | wide only | $119–$149 | road and trail runners who want one wide-only brand |
+| Northpine | 2E and 4E (Talus XW) | $129–$169 | trail runners who sized up and still got squeezed |
+
+Prices from each brand's site, checked [check: date before publishing].
+
+## Ridgeline or Trailkind for wide feet?
+Ridgeline offers wide versions of its main performance models; Trailkind has a broader range but fewer wide options. If you need 4E, check each model's size chart: most general brands make 2E on one or two models only.
+
+## Is 2E or 4E wider?
+4E is wider than 2E. If a 2E shoe still presses on your little toe, try 4E. See our [width guide](/guides/choosing-width) for how to measure.
+
+## When sizing up is enough
+If your feet are only slightly wide, half a size up can be enough. If your toes still go numb on descents, a wider last fits better than a longer shoe.
+
+---
+
+**Internal links to add:** on /collections/wide-trail-shoes, link the words "compare wide trail shoe brands" to /pages/ridgeline-alternatives-wide-feet.

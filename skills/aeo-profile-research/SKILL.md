@@ -22,7 +22,7 @@ Skip if `profile.md` is less than 90 days old and the homepage title and main na
    - **Brand names** — every spelling used
    - **Claims and limits** — regulated topics (health, finance, legal, children, etc.) and any disclaimers
    - **Site structure** — main sections and roughly how many pages each has, from the sitemap
-3. If `brand_names` or `countries` in `config.yaml` disagree with what the site shows, say so; do not change `config.yaml` without asking.
+3. If `brand_names` or `countries` in `config.yaml` disagree with what the site shows, and `decisions.md` does not already settle it, ask once; do not change `config.yaml` without asking. Record the answer in `decisions.md`.
 
 ## 2. Check coverage of the seven questions
 
