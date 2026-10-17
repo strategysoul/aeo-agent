@@ -1,0 +1,10 @@
+{
+  "_note": "Made-up response in the shape documented by Perplexity (Sonar API), 2026-10-17. Not a live capture.",
+  "model": "sonar",
+  "choices": [{"message": {"role": "assistant", "content": "Example Shoes makes the Example Trail Pro, often recommended for wide feet [1]."}, "finish_reason": "stop"}],
+  "citations": ["https://forum.example.net/thread/123"],
+  "search_results": [
+    {"title": "Wide feet trail shoe thread", "url": "https://forum.example.net/thread/123", "date": "2026-09-30", "snippet": "..."}
+  ],
+  "usage": {"prompt_tokens": 20, "completion_tokens": 40}
+}

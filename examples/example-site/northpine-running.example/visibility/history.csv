@@ -1,0 +1,5 @@
+record_date,engine,source,answers,mention_rate,citation_rate,avg_position,share_of_voice,accuracy_issues,negative,run_id
+2026-10-06,openai,api:openai,12,0.17,0.08,2.5,0.08,1,0,2026-10-06-visibility-9c0d
+2026-10-06,perplexity,api:perplexity,12,0.33,0.25,1.8,0.16,1,0,2026-10-06-visibility-9c0d
+2026-10-13,openai,api:openai,12,0.25,0.17,2.0,0.14,1,0,2026-10-13-visibility-5c6d
+2026-10-13,perplexity,api:perplexity,12,0.42,0.33,1.6,0.2,1,0,2026-10-13-visibility-5c6d

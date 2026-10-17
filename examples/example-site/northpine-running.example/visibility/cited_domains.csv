@@ -1,0 +1,9 @@
+record_date,domain,answers_citing,engines,topics,is_own_site,is_competitor,run_id
+2026-10-13,runreview.example,13,openai|perplexity,Alternatives to Ridgeline|Trail shoes for bunions|Wide trail running shoes|brand,no,no,2026-10-13-visibility-5c6d
+2026-10-13,trailtalk-forum.example,9,openai|perplexity,Choosing shoe width|Trail shoes for bunions|Wide trail running shoes|brand,no,no,2026-10-13-visibility-5c6d
+2026-10-13,northpine-running.example,6,openai|perplexity,Choosing shoe width|Wide trail running shoes|brand,yes,no,2026-10-13-visibility-5c6d
+2026-10-13,gearlab-test.example,5,openai|perplexity,Alternatives to Ridgeline|Choosing shoe width|Wide trail running shoes,no,no,2026-10-13-visibility-5c6d
+2026-10-13,hikeboard.example,4,openai|perplexity,Alternatives to Ridgeline|Wide trail running shoes,no,no,2026-10-13-visibility-5c6d
+2026-10-13,podiatry-notes.example,4,openai|perplexity,Trail shoes for bunions,no,no,2026-10-13-visibility-5c6d
+2026-10-13,ridgeline-shoes.example,3,openai,Alternatives to Ridgeline|Wide trail running shoes,no,yes,2026-10-13-visibility-5c6d
+2026-10-13,trailkind.example,1,openai,Alternatives to Ridgeline,no,yes,2026-10-13-visibility-5c6d

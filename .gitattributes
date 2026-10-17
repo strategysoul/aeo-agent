@@ -1,0 +1,9 @@
+# Keep LF everywhere so the approval hashes in examples/ match on every OS.
+* text=auto eol=lf
+*.cmd text eol=crlf
+
+# Left out of the aeo-agent.plugin release archive (git archive).
+.github/ export-ignore
+examples/ export-ignore
+scripts/tests/ export-ignore
+.gitattributes export-ignore

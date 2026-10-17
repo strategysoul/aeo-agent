@@ -1,0 +1,19 @@
+{
+  "_note": "Made-up response in the shape documented by Google (Gemini Interactions API + google_search), 2026-10-17. Not a live capture.",
+  "steps": [
+    {"type": "google_search_call", "arguments": {"queries": ["trail running shoes wide feet"]}},
+    {"type": "google_search_result", "call_id": "c1", "result": [{"search_suggestions": "<div>...</div>"}]},
+    {
+      "type": "model_output",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sample Ridge and Example Trail Pro are common choices.",
+          "annotations": [
+            {"type": "url_citation", "url": "https://sample-brand.example/ridge", "title": "Sample Ridge", "start_index": 0, "end_index": 12}
+          ]
+        }
+      ]
+    }
+  ]
+}

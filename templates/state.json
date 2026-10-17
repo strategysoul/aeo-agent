@@ -1,0 +1,17 @@
+{
+  "domain": null,
+  "approvals": {
+    "research_brief": { "approved": false, "approved_at": null, "brief_hash": null },
+    "priority_topics": { "approved": false, "approved_at": null, "topics_hash": null }
+  },
+  "last_run": {
+    "setup": null,
+    "research": null,
+    "keywords": null,
+    "visibility": null,
+    "technical": null,
+    "actions": null,
+    "report": null
+  },
+  "runs": []
+}

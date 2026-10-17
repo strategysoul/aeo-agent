@@ -1,0 +1,3 @@
+# ask_engines.py uses the Python standard library only (Python 3.9+).
+# The tests run with the standard library too; pytest is optional for nicer output.
+pytest>=8

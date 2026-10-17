@@ -1,0 +1,22 @@
+{
+  "_note": "Made-up response in the shape documented by OpenAI (Responses API + web_search), 2026-10-17. Not a live capture.",
+  "model": "gpt-5.5",
+  "output": [
+    {"type": "web_search_call", "status": "completed", "action": {"type": "search", "query": "best trail running shoes for wide feet"}},
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "Popular picks include the Example Trail Pro from Example Shoes and the Sample Ridge.",
+          "annotations": [
+            {"type": "url_citation", "start_index": 0, "end_index": 40, "url": "https://reviews.example.org/wide-trail-shoes", "title": "Best wide trail shoes"},
+            {"type": "url_citation", "start_index": 41, "end_index": 80, "url": "https://example-shoes.example/trail-pro", "title": "Example Trail Pro"},
+            {"type": "url_citation", "start_index": 0, "end_index": 10, "url": "https://reviews.example.org/wide-trail-shoes", "title": "Best wide trail shoes"}
+          ]
+        }
+      ]
+    }
+  ],
+  "usage": {"input_tokens": 1200, "output_tokens": 180}
+}

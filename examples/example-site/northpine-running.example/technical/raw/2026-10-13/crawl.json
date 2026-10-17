@@ -1,0 +1,49 @@
+{
+  "_note": "MADE-UP EXAMPLE, shortened: 2 of 120 pages shown. Real output from crawl_check.py lists every page checked.",
+  "domain": "northpine-running.example",
+  "checked_at": "2026-10-13T06:02:11+00:00",
+  "user_agent": "AEO-Agent/0.1 (site check; +https://github.com/strategysoul/aeo-agent)",
+  "robots": {
+    "status": 200,
+    "bots": {
+      "Googlebot": {"kind": "search", "allowed": true},
+      "Bingbot": {"kind": "search", "allowed": true},
+      "OAI-SearchBot": {"kind": "search", "allowed": true},
+      "PerplexityBot": {"kind": "search", "allowed": true},
+      "Claude-SearchBot": {"kind": "search", "allowed": false},
+      "ChatGPT-User": {"kind": "user", "allowed": true},
+      "Perplexity-User": {"kind": "user", "allowed": true},
+      "Claude-User": {"kind": "user", "allowed": true},
+      "GPTBot": {"kind": "training", "allowed": false},
+      "ClaudeBot": {"kind": "training", "allowed": true},
+      "Google-Extended": {"kind": "training", "allowed": true}
+    },
+    "sitemaps": ["https://northpine-running.example/sitemap.xml"]
+  },
+  "llms_txt": {"status": 404, "bytes": 0},
+  "sitemap": {"read": ["https://northpine-running.example/sitemap.xml"], "errors": [], "url_count": 120, "not_in_sitemap": []},
+  "pages": [
+    {
+      "url": "https://northpine-running.example/collections/wide-trail-shoes",
+      "final_url": "https://northpine-running.example/collections/wide-trail-shoes",
+      "status": 200, "redirects": [], "content_type": "text/html; charset=utf-8", "x_robots": [], "last_modified": null,
+      "title": "Wide Trail Running Shoes | Northpine Running", "description": "Wide and extra-wide trail running shoes.",
+      "meta_robots": [], "canonical": "https://northpine-running.example/collections/wide-trail-shoes",
+      "h1": ["Wide Trail Shoes"], "lang": "en", "hreflang": [], "jsonld_types": ["BreadcrumbList", "CollectionPage"],
+      "scripts": 9, "text_chars": 1840, "issues": []
+    },
+    {
+      "url": "https://northpine-running.example/guides/choosing-width",
+      "final_url": "https://northpine-running.example/guides/choosing-width",
+      "status": 200, "redirects": [], "content_type": "text/html; charset=utf-8", "x_robots": [], "last_modified": null,
+      "title": "How to Choose Shoe Width | Northpine Running", "description": "2E, 4E and how to measure.",
+      "meta_robots": [], "canonical": "https://northpine-running.example/guides/choosing-width",
+      "h1": ["Choosing your width"], "lang": "en", "hreflang": [], "jsonld_types": [],
+      "scripts": 7, "text_chars": 310,
+      "issues": [{"type": "possibly_js_only", "severity": "warning", "detail": "310 chars of text without JavaScript, 7 scripts"}]
+    }
+  ],
+  "bot_fetch": {"Googlebot": 200, "Bingbot": 200, "OAI-SearchBot": 200, "PerplexityBot": 200, "Claude-SearchBot": 200,
+                "ChatGPT-User": 200, "Perplexity-User": 200, "Claude-User": 200},
+  "summary": {"pages_checked": 120, "errors": 2, "warnings": 3, "notices": 14, "search_bots_blocked": ["Claude-SearchBot"]}
+}

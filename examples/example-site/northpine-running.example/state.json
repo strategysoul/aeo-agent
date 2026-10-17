@@ -1,0 +1,157 @@
+{
+  "_note": "MADE-UP EXAMPLE.",
+  "domain": "northpine-running.example",
+  "approvals": {
+    "research_brief": {
+      "approved": true,
+      "approved_at": "2026-10-05",
+      "brief_hash": "3840504aeb2937334005217ef7207dc46a7844739a761f6ba07bbe70a27e3def"
+    },
+    "priority_topics": {
+      "approved": true,
+      "approved_at": "2026-10-06",
+      "topics_hash": "76cbe032395697cb347c1ab2995fd903371ccb4111a0fd27d6506848dbe08776"
+    }
+  },
+  "last_run": {
+    "setup": "2026-10-05",
+    "research": "2026-10-05",
+    "keywords": "2026-10-06",
+    "visibility": "2026-10-13",
+    "technical": "2026-10-13",
+    "actions": "2026-10-13",
+    "report": "2026-10-13"
+  },
+  "runs": [
+    {
+      "run_id": "2026-10-05-setup-1a2b",
+      "step": "setup",
+      "source": "-",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-05T09:00:00Z",
+      "finished_at": "2026-10-05T09:04:00Z"
+    },
+    {
+      "run_id": "2026-10-05-research-3c4d",
+      "step": "research",
+      "source": "dataforseo",
+      "units_spent": 0.31,
+      "unit": "usd",
+      "engine_calls": 0,
+      "started_at": "2026-10-05T09:05:00Z",
+      "finished_at": "2026-10-05T09:41:00Z"
+    },
+    {
+      "run_id": "2026-10-06-keywords-5e6f",
+      "step": "keywords",
+      "source": "dataforseo",
+      "units_spent": 1.84,
+      "unit": "usd",
+      "engine_calls": 0,
+      "started_at": "2026-10-06T08:00:00Z",
+      "finished_at": "2026-10-06T08:22:00Z"
+    },
+    {
+      "run_id": "2026-10-06-technical-7a8b",
+      "step": "technical",
+      "source": "own_crawl",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-06T08:30:00Z",
+      "finished_at": "2026-10-06T08:36:00Z"
+    },
+    {
+      "run_id": "2026-10-06-visibility-9c0d",
+      "step": "visibility",
+      "source": "api:openai|api:perplexity",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 24,
+      "started_at": "2026-10-06T08:40:00Z",
+      "finished_at": "2026-10-06T08:58:00Z"
+    },
+    {
+      "run_id": "2026-10-06-actions-1e2f",
+      "step": "actions",
+      "source": "-",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-06T09:00:00Z",
+      "finished_at": "2026-10-06T09:20:00Z"
+    },
+    {
+      "run_id": "2026-10-06-report-4f5a",
+      "step": "report",
+      "source": "gsc",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-06T09:21:00Z",
+      "finished_at": "2026-10-06T09:25:00Z"
+    },
+    {
+      "run_id": "2026-10-07-technical-0b1c",
+      "step": "technical",
+      "source": "own_crawl",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-07T06:07:00Z",
+      "finished_at": "2026-10-07T06:09:00Z"
+    },
+    {
+      "run_id": "2026-10-10-technical-2d3e",
+      "step": "technical",
+      "source": "own_crawl",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-10T06:07:00Z",
+      "finished_at": "2026-10-10T06:09:00Z"
+    },
+    {
+      "run_id": "2026-10-13-technical-3a4b",
+      "step": "technical",
+      "source": "own_crawl",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-13T06:00:00Z",
+      "finished_at": "2026-10-13T06:06:00Z"
+    },
+    {
+      "run_id": "2026-10-13-visibility-5c6d",
+      "step": "visibility",
+      "source": "api:openai|api:perplexity",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 24,
+      "started_at": "2026-10-13T07:10:00Z",
+      "finished_at": "2026-10-13T07:30:00Z"
+    },
+    {
+      "run_id": "2026-10-13-actions-7e8f",
+      "step": "actions",
+      "source": "-",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-13T07:31:00Z",
+      "finished_at": "2026-10-13T07:44:00Z"
+    },
+    {
+      "run_id": "2026-10-13-report-9a0b",
+      "step": "report",
+      "source": "gsc",
+      "units_spent": 0,
+      "unit": null,
+      "engine_calls": 0,
+      "started_at": "2026-10-13T07:45:00Z",
+      "finished_at": "2026-10-13T07:48:00Z"
+    }
+  ]
+}

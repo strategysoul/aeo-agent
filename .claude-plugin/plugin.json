@@ -1,0 +1,12 @@
+{
+  "name": "aeo-agent",
+  "displayName": "AEO Agent",
+  "version": "0.1.0",
+  "description": "Finds the keywords and questions that matter for any website, measures whether it shows up in Google and in AI answers, and recommends what to change. Works with whatever SEO and AI tools you have, from free to full suites.",
+  "author": {
+    "name": "AEO Agent contributors"
+  },
+  "repository": "https://github.com/strategysoul/aeo-agent",
+  "license": "MIT",
+  "keywords": ["seo", "aeo", "geo", "ai-visibility", "search-console", "ahrefs"]
+}

@@ -1,0 +1,40 @@
+# MADE-UP EXAMPLE. Northpine Running and every .example domain in this folder are fictional.
+
+domain: northpine-running.example
+countries: [US, CA]
+languages: [en]
+brand_names: [Northpine, Northpine Running]
+
+research:
+  paths: []
+  max_age_days: 90
+
+audit:
+  ahrefs_project_id: null
+  semrush_project_id: null
+
+budget:
+  share_of_remaining: 0.10
+  hard_cap_units: null
+  engine_calls_per_run: 100
+  chrome_prompts_per_engine: 20
+  chrome_in_scheduled_runs: false
+
+engines: {}
+
+capabilities:
+  checked_at: 2026-10-05
+  sources:
+    web:        {status: available}
+    gsc:        {status: available, via: mcp, property: "sc-domain:northpine-running.example"}
+    chrome:     {status: missing}
+    ahrefs:     {status: missing}
+    semrush:    {status: missing}
+    dataforseo: {status: available, via: mcp, unit: usd, units_left: 46.12}
+    brand_radar: {status: missing}
+    nimble:     {status: missing}
+    openai:     {status: available, via: env}
+    perplexity: {status: untested, via: env}
+    gemini:     {status: missing}
+    anthropic:  {status: missing}
+    firecrawl:  {status: missing}

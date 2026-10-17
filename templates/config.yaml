@@ -1,0 +1,44 @@
+# Site config for the AEO agent. One file per site, at <AEO_ROOT>/<domain>/config.yaml.
+# /aeo <domain> setup fills the capabilities section. Edit the rest by hand any time.
+# Never put API keys here: they belong in environment variables or connector settings.
+
+domain: example.com           # no scheme, no trailing slash
+countries: [US]               # ISO 3166-1 alpha-2, first one is the main market
+languages: [en]               # ISO 639-1
+brand_names: []               # how people write the brand, e.g. [Example, Example App]
+
+research:
+  paths: []                   # folders or files with research you already have
+  max_age_days: 90            # older findings get re-checked
+
+audit:
+  ahrefs_project_id: null     # Ahrefs Site Audit project, if you have one
+  semrush_project_id: null
+
+budget:
+  share_of_remaining: 0.10    # max share of the month's remaining units per site per run
+  hard_cap_units: null        # optional absolute cap per run
+  engine_calls_per_run: 100   # AI-engine API questions per site per run, all engines together
+  chrome_prompts_per_engine: 20
+  chrome_in_scheduled_runs: false   # true lets scheduled runs use your logged-in Chrome
+
+# Override ask_engines.py default models if a provider renames or retires one.
+engines: {}
+  # openai: {model: gpt-5.5}
+
+# Written by /aeo setup. Re-checked every 30 days, or sooner when a call fails.
+capabilities:
+  checked_at: null            # ISO date of the last capability test
+  sources: {}
+  # Each entry looks like:
+  # ahrefs:
+  #   status: available | missing | error | untested
+  #   via: mcp | api | env
+  #   plan: Lite
+  #   unit: units             # units, or usd for pay-as-you-go sources such as DataForSEO
+  #   units_left: 150000
+  #   site_authority: 34      # Ahrefs DR or Semrush Authority Score, written by the keywords step
+  #   units_reset: 2026-11-01
+  #   row_limit: 100
+  #   addons: [brand-radar]
+  #   last_error: null

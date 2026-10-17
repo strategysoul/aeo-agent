@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-05",
+  "run_id": "2026-10-05-research-3c4d",
+  "max_age_days": 90,
+  "questions": {
+    "1": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 1. Product and price", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "2": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 2. Audiences", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "3": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 3. Competitors and alternatives", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "4": {"status": "partial", "missing": "AI citations are inferred from web search, not measured; measured in the visibility step", "evidence": [{"file": "research/brief.md", "where": "## 4. Who ranks and gets cited", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "5": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 5. Questions people ask", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "6": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 6. Where audiences read and talk", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"},
+    "7": {"status": "answered", "missing": "", "evidence": [{"file": "research/brief.md", "where": "## 7. Rules", "date": "2026-10-05", "date_basis": "in_document"}], "action": "research"}
+  }
+}

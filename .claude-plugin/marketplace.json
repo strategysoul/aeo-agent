@@ -1,0 +1,14 @@
+{
+  "name": "aeo-agent",
+  "description": "AEO Agent: search and AI-answer visibility for any website",
+  "owner": {
+    "name": "AEO Agent contributors"
+  },
+  "plugins": [
+    {
+      "name": "aeo-agent",
+      "source": "./",
+      "description": "Keyword research, AI-answer visibility checks, and weekly recommendations for any website"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "Made-up response in the legacy generateContent shape with grounding metadata. Not a live capture.",
+  "candidates": [
+    {
+      "content": {"parts": [{"text": "Example Trail Pro "}, {"text": "fits wide feet."}]},
+      "groundingMetadata": {
+        "webSearchQueries": ["wide trail shoes"],
+        "groundingChunks": [
+          {"web": {"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "title": "reviews.example.org"}}
+        ]
+      }
+    }
+  ]
+}
