@@ -1,6 +1,6 @@
 ---
 name: aeo-keywords
-description: Steps 2 and 3 of the AEO agent. Finds keywords and questions for a website from seed expansion, competitor keywords, "People also ask" and Search Console, scores each on audience fit, intent, demand, difficulty and AI-answer potential, groups them into page-sized topics, and asks for approval of the priority topics. Spends paid units only within the site's budget. Use for /aeo-agent:aeo <domain> keywords, or the monthly keyword refresh.
+description: Steps 2 and 3 of the AEO agent. Finds keywords and questions for a website from seed expansion, competitor keywords, competitor ads in the Google Ads Transparency Center, "People also ask" and Search Console, scores each on audience fit, intent, demand, difficulty and AI-answer potential, groups them into page-sized topics, and asks for approval of the priority topics. Spends paid units only within the site's budget. Use for /aeo-agent:aeo <domain> keywords, or the monthly keyword refresh.
 ---
 
 # AEO keywords
@@ -12,6 +12,7 @@ Follow `${CLAUDE_PLUGIN_ROOT}/skills/aeo/references/rules.md` throughout. Work i
 - `state.json` → `approvals.research_brief.approved` must be `true`, and its `brief_hash` must match the current `research/brief.md`. If not: in an interactive run, offer to run research approval now; in a scheduled run, stop with "Research brief needs approval before keywords can run."
 - Pick the SEO data source: the first `available` of `ahrefs` → `semrush` → `dataforseo`. Read its recipe in `references/recipe-<source>.md`. None available: use `references/recipe-fallback.md` and say in the output that volumes are inferred.
 - Search Console (`gsc`) is used whenever it is available, alongside any source. It is free.
+- Competitor ads from the Google Ads Transparency Center are read with `references/ads-transparency.md`, alongside any source. They are free through Chrome.
 - Create `run_id` (`<today>-keywords-<4 hex>`) and `keywords/raw/<today>/` for raw responses.
 
 ## 1. Set the budget
@@ -29,9 +30,10 @@ Write the plan as a short table (call, rows, estimated cost) before spending any
 | 1 | Search Console queries, last 90 days, main country | up to 1,000 rows (free) |
 | 2 | Site authority | 1 call |
 | 3 | Seed expansion: related terms, suggestions and questions for each seed from the brief | 10–20 seeds × 50 rows |
-| 4 | Competitor keywords: top 3–5 direct competitors from `research/competitors.csv`, positions 1–20 | 100–200 rows each |
-| 5 | Volume, difficulty and intent for the merged list (whatever 3–4 did not already return) | the whole list, batched |
-| 6 | Google top 10 for the highest-scoring keywords, for grouping and the AI Overview flag | 50–100 keywords |
+| 4 | Competitor keywords: top 3–5 direct competitors from `research/competitors.csv` (by `keywords_in_top10` + `ads_on_seed_keywords`), positions 1–20 | 100–200 rows each |
+| 5 | Competitor ads: the same competitors in the Google Ads Transparency Center, last 30 days (`references/ads-transparency.md`) | up to 30 ads each (free through Chrome) |
+| 6 | Volume, difficulty and intent for the merged list (whatever 3–5 did not already return) | the whole list, batched |
+| 7 | Google top 10 for the highest-scoring keywords, for grouping and the AI Overview flag | 50–100 keywords |
 
 Estimate cost from the recipe's cost section. If the plan had to be cut, say which rows were dropped. Reuse raw responses from earlier runs that are less than 30 days old instead of calling again.
 
@@ -45,7 +47,8 @@ Run the planned calls. Save each response to `keywords/raw/<today>/`. Merge ever
 keyword,origin,volume,demand_band,difficulty,intent,ai_overview,paa,gsc_impressions,gsc_position,gsc_url,notes,source,method,record_date,run_id
 ```
 
-- `origin`: `seed:<seed>`, `competitor:<domain>`, `paa`, `gsc`, `brief`. A keyword found several ways keeps all origins, separated by `|`.
+- `origin`: `seed:<seed>`, `competitor:<domain>`, `ads:<domain>`, `paa`, `gsc`, `brief`. A keyword found several ways keeps all origins, separated by `|`.
+- Add the phrases taken from competitor ads, following `references/ads-transparency.md`.
 - Also add the questions from the brief (question 5) and the "People also ask" questions saved in `research/raw/`.
 - Normalise before merging: lower-case, trim, collapse spaces. Keep plural and word-order variants as separate rows, but group them later.
 - Drop keywords in a language or for a country the site does not serve.
@@ -95,4 +98,4 @@ Read the balance again where possible. Units spent = before − after; otherwise
 
 ## Output to the user
 
-Source used (and any fallback), keywords found by origin, topics, units spent against the budget, what was cut for budget, and the approval question.
+Source used (and any fallback), keywords found by origin (say if competitor ads were not checked and why), topics, units spent against the budget, what was cut for budget, and the approval question.

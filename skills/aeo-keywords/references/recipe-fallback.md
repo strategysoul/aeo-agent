@@ -8,6 +8,7 @@ Used when none of `ahrefs`, `semrush`, `dataforseo` is `available`. Everything h
 - Search Console queries, if `gsc` is available (free and measured — always use it).
 - Google autocomplete, if `chrome` is available: type each seed into the main country's Google domain and read the suggestions without running the search. At most 20 seeds per run. If Google shows a CAPTCHA, stop and tell the user; never try to solve it.
 - "People also ask" and "Related searches" from Google results pages, read through Chrome or web search.
+- Competitor ads from the Google Ads Transparency Center, through Chrome (`ads-transparency.md`). Without an SEO source their phrases keep `demand_band: none` unless other evidence above gives them a band.
 
 ## Demand without volumes
 

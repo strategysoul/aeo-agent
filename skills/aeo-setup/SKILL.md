@@ -48,7 +48,7 @@ Show one table, then the level reached, then what to do next. Example layout:
 |---|---|---|---|---|
 | Web search and fetch | available | research, competitor pages, fallback rank checks | free | built in |
 | Google Search Console | missing | your own queries, clicks and rankings, measured | free | `docs/setup/google-search-console.md` |
-| Claude in Chrome | available | reads AI answers from your logged-in ChatGPT, Perplexity, Gemini | included in Pro/Max/Team/Enterprise | `docs/setup/claude-in-chrome.md` |
+| Claude in Chrome | available | reads AI answers from your logged-in ChatGPT, Perplexity, Gemini; competitor ads in the Google Ads Transparency Center | included in Pro/Max/Team/Enterprise | `docs/setup/claude-in-chrome.md` |
 | Ahrefs | available (Lite, 180,000 units left, 100 rows) | measured keyword volume, difficulty, competitors, site audit | from Lite plan | `docs/setup/ahrefs.md` |
 
 Rules for the table:

@@ -7,6 +7,8 @@ Each need has an order of sources. The agent uses the first one that is connecte
 | Keyword volume, difficulty, intent | Ahrefs → Semrush → DataForSEO | Demand bands from Search Console, autocomplete and "People also ask", labelled `inferred` |
 | Google results for a keyword | Ahrefs → Semrush → DataForSEO | Chrome or web search |
 | Competitor keywords | Ahrefs → Semrush → DataForSEO | Competitor page titles and headings |
+| Sponsored results (who advertises on a search) | Semrush → DataForSEO → Chrome (Ahrefs and web search do not return ads) | Not checked, said in the output |
+| Competitor ads and their wording | Google Ads Transparency Center through Chrome → DataForSEO (if its docs list an endpoint) → web fetch | Not checked, said in the output. Keywords from ads are always `inferred`: the Center shows ads, not the keywords they target |
 | Own rankings and clicks | Google Search Console → Ahrefs / Semrush | Rank checks in Google results |
 | Technical health | Ahrefs Site Audit → Semrush Site Audit, plus always the agent's own crawl | Own crawl only |
 | AI answers and citations | Brand Radar → Nimble → engine APIs (`ask_engines.py`) → Chrome | Web search as a weak stand-in, labelled as such |
@@ -26,7 +28,7 @@ The AI-answer order is chosen per engine; the full table is in [skills/aeo-visib
 
 - **Row caps.** A response with exactly the plan's row limit is treated as cut off: the agent pages through or marks the list incomplete.
 - **Plan or add-on errors.** Recorded in `config.yaml`; that need moves to the next source.
-- **No competitors for a new site.** Competitors come from Google results for the starting keywords instead.
+- **No competitors for a new site.** Competitors come from Google results for the starting keywords instead, including the advertisers in their sponsored results.
 - **Provider terms.** Some providers (Ahrefs among them) do not allow their MCP endpoint to be called from scripts. All MCP calls stay inside Claude; scripts only call AI-engine APIs and your own site.
 
 ## Setup guides

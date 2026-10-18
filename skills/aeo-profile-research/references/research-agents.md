@@ -6,7 +6,7 @@ Group the open questions so each agent has a clear job. Use as many agents as th
 
 | Agent | Questions | Where it looks |
 |---|---|---|
-| Market | 1, 3 | competitor sites (pricing, features, positioning pages), comparison and "best of" articles, marketplace listings |
+| Market | 1, 3 | competitor sites (pricing, features, positioning pages), competitor ads read in step 3, comparison and "best of" articles, marketplace listings |
 | Audience | 2, 6 | forums, Reddit, Quora, review sites, community groups, social posts, YouTube comments, Q&A sites |
 | Questions | 5 | "People also ask" from step 3, autocomplete via web search, forums, review questions, Search Console queries if connected |
 | Rules | 7 | regulator sites, laws and official guidance for the site's countries, platform ad and content policies, industry codes |
