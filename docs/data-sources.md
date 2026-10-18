@@ -7,6 +7,7 @@ Each need has an order of sources. The agent uses the first one that is connecte
 | Keyword volume, difficulty, intent | Ahrefs → Semrush → DataForSEO | Demand bands from Search Console, autocomplete and "People also ask", labelled `inferred` |
 | Google results for a keyword | Ahrefs → Semrush → DataForSEO | Chrome or web search |
 | Competitor keywords | Ahrefs → Semrush → DataForSEO | Competitor page titles and headings |
+| Competitor ads and their wording | Google Ads Transparency Center through Chrome → DataForSEO (if its docs list an endpoint) → web fetch | Not checked, said in the output. Keywords from ads are always `inferred`: the Center shows ads, not the keywords they target |
 | Own rankings and clicks | Google Search Console → Ahrefs / Semrush | Rank checks in Google results |
 | Technical health | Ahrefs Site Audit → Semrush Site Audit, plus always the agent's own crawl | Own crawl only |
 | AI answers and citations | Brand Radar → Nimble → engine APIs (`ask_engines.py`) → Chrome | Web search as a weak stand-in, labelled as such |

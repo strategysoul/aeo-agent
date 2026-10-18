@@ -46,6 +46,7 @@ Needed for questions 3 (competitors) and 4 (who ranks and gets cited). Skip if b
 2. **Google results for each.** Use the first available source: Ahrefs SERP overview → Semrush → DataForSEO → web search. Check the budget first (rules.md). Record for each keyword: the top 10 URLs and domains, whether an AI Overview appears, and the "People also ask" questions if the source returns them.
 3. **Count competitor domains.** Count how many starting keywords each domain ranks top 10 for. Drop the site itself and generic sites (Wikipedia, YouTube, Reddit, Amazon, major news) from the competitor count, but keep them in a separate "places the audience reads" list for question 6.
 4. Write `research/competitors.csv` (format in `references/coverage.md`). If an SEO source reports organic competitors for the domain, merge those in with their own `source`. For a new site where the SEO source returns none, the Google results count is the competitor list.
+5. **Competitor ads.** For the top 3–5 direct competitors, read their current ads in the Google Ads Transparency Center with `${CLAUDE_PLUGIN_ROOT}/skills/aeo-keywords/references/ads-transparency.md`, and save them to `research/raw/<today>/ads-transparency.csv`. Give the Market agent the offers and claims found, as already known.
 
 ## 4. Research the gaps
 
