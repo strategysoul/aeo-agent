@@ -31,7 +31,7 @@ Approval: see state.json
 |---|---|---|---|---|---|
 
 Competitor ads (Google Ads Transparency Center, <region>, last 30 days):
-- <competitor>: <n> ads; offers and claims: <...>; names: <products, audiences> — [ads](<URL>), <date>
+- <competitor>: sponsored results on <n> of <n> starting searches; <n> ads; offers and claims: <...>; names: <products, audiences> — [ads](<URL>), <date>
 
 Alternatives to buying anything: <...>
 

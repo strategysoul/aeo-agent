@@ -49,9 +49,10 @@ Dating evidence: use a date written in the document or next to the finding. If t
 ## `research/competitors.csv`
 
 ```
-domain,name,type,keywords_in_top10,seed_keywords_checked,evidence_url,source,method,record_date,run_id
+domain,name,type,keywords_in_top10,ads_on_seed_keywords,seed_keywords_checked,evidence_url,source,method,record_date,run_id
 ```
 
 - `type`: `direct` (sells the same thing), `alternative` (a different way to solve the same problem), `publisher` (ranks with content but does not sell).
 - `keywords_in_top10` out of `seed_keywords_checked`.
+- `ads_on_seed_keywords`: how many of the same starting keywords showed a sponsored result from the domain. Empty if sponsored results were not checked.
 - New runs add rows. Keep earlier rows; the `record_date` tells them apart.

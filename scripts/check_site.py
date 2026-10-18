@@ -19,7 +19,7 @@ METHODS = {"measured", "estimated", "inferred"}
 
 # Column lists copied from the skills. Keep in step when a skill changes a format.
 COLUMNS = {
-    "research/competitors.csv": "domain,name,type,keywords_in_top10,seed_keywords_checked,evidence_url,source,method,record_date,run_id",
+    "research/competitors.csv": "domain,name,type,keywords_in_top10,ads_on_seed_keywords,seed_keywords_checked,evidence_url,source,method,record_date,run_id",
     "keywords/raw.csv": "keyword,origin,volume,demand_band,difficulty,intent,ai_overview,paa,gsc_impressions,gsc_position,gsc_url,notes,source,method,record_date,run_id",
     "keywords/scored.csv": "keyword,origin,volume,demand_band,difficulty,intent,ai_overview,paa,gsc_impressions,gsc_position,gsc_url,notes,source,method,record_date,run_id,fit,fit_reason,intent_score,demand,ease,bonus,score",
     "prompts.csv": "prompt_id,prompt,topic,type,language,country,active,created,run_id",

@@ -1,7 +1,8 @@
-domain,name,type,keywords_in_top10,seed_keywords_checked,evidence_url,source,method,record_date,run_id
-ridgeline-shoes.example,Ridgeline,direct,11,16,https://ridgeline-shoes.example/wide,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
-trailkind.example,Trailkind,direct,9,16,https://trailkind.example/,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
-widefoot-gear.example,WideFoot Gear,direct,6,16,https://widefoot-gear.example/trail,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
-runreview.example,Run Review,publisher,12,16,https://runreview.example/wide-trail-shoes-2026,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
-gearlab-test.example,Gearlab Test,publisher,8,16,https://gearlab-test.example/trail,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
-size-up-half,Sizing up half a size,alternative,0,16,https://trailtalk-forum.example/t/wide-feet-descents,web_search,inferred,2026-10-05,2026-10-05-research-3c4d
+domain,name,type,keywords_in_top10,ads_on_seed_keywords,seed_keywords_checked,evidence_url,source,method,record_date,run_id
+ridgeline-shoes.example,Ridgeline,direct,11,7,16,https://ridgeline-shoes.example/wide,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+trailkind.example,Trailkind,direct,9,0,16,https://trailkind.example/,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+widefoot-gear.example,WideFoot Gear,direct,6,3,16,https://widefoot-gear.example/trail,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+stridewide.example,StrideWide,direct,0,5,16,https://stridewide.example/trail-wide,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+runreview.example,Run Review,publisher,12,0,16,https://runreview.example/wide-trail-shoes-2026,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+gearlab-test.example,Gearlab Test,publisher,8,0,16,https://gearlab-test.example/trail,dataforseo,measured,2026-10-05,2026-10-05-research-3c4d
+size-up-half,Sizing up half a size,alternative,0,,16,https://trailtalk-forum.example/t/wide-feet-descents,web_search,inferred,2026-10-05,2026-10-05-research-3c4d

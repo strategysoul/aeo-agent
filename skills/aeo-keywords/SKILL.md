@@ -30,7 +30,7 @@ Write the plan as a short table (call, rows, estimated cost) before spending any
 | 1 | Search Console queries, last 90 days, main country | up to 1,000 rows (free) |
 | 2 | Site authority | 1 call |
 | 3 | Seed expansion: related terms, suggestions and questions for each seed from the brief | 10–20 seeds × 50 rows |
-| 4 | Competitor keywords: top 3–5 direct competitors from `research/competitors.csv`, positions 1–20 | 100–200 rows each |
+| 4 | Competitor keywords: top 3–5 direct competitors from `research/competitors.csv` (by `keywords_in_top10` + `ads_on_seed_keywords`), positions 1–20 | 100–200 rows each |
 | 5 | Competitor ads: the same competitors in the Google Ads Transparency Center, last 30 days (`references/ads-transparency.md`) | up to 30 ads each (free through Chrome) |
 | 6 | Volume, difficulty and intent for the merged list (whatever 3–5 did not already return) | the whole list, batched |
 | 7 | Google top 10 for the highest-scoring keywords, for grouping and the AI Overview flag | 50–100 keywords |

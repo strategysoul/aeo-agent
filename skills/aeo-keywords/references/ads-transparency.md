@@ -11,7 +11,7 @@ So every keyword taken from an ad is `method: inferred`. The ad shows that a com
 
 ## Which competitors
 
-The top 3–5 `direct` competitors in `research/competitors.csv`, by `keywords_in_top10`. Skip competitors listed under `## Not interested` in `decisions.md`. Region: `countries[0]`. Period: the last 30 days. If a competitor shows no ads there, record "no ads in <region>, last 30 days" and move on.
+The top 3–5 `direct` competitors in `research/competitors.csv`, by `keywords_in_top10` + `ads_on_seed_keywords`. Skip competitors listed under `## Not interested` in `decisions.md`. Region: `countries[0]`. Period: the last 30 days. If a competitor shows no ads there, record "no ads in <region>, last 30 days" and move on.
 
 ## How to read it, in order
 
@@ -35,7 +35,7 @@ competitor_domain,advertiser_name,format,platform,headline,description,landing_u
 
 ## Using it in research
 
-Add to the brief, under "3. Competitors and alternatives", one line per competitor: number of ads seen, the main offers and claims (price, discount, free shipping, guarantees), and the products or audiences they name, with the ad URL and date. Ads running for more than 90 days with the same message are probably working for that competitor; say so.
+Add to the brief, under "3. Competitors and alternatives", one line per competitor: how many starting searches it shows a sponsored result for, number of ads seen, the main offers and claims (price, discount, free shipping, guarantees), and the products or audiences they name, with the ad URL and date. Ads running for more than 90 days with the same message are probably working for that competitor; say so.
 
 ## Using it for keywords
 
